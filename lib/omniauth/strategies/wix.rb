@@ -38,7 +38,7 @@ module OmniAuth
       end
       
       def callback_url
-        full_host + script_name + callback_path
+        full_host + script_name + ENV["WIX_CALLBACK_PATH"]
       end
 
       def build_access_token
